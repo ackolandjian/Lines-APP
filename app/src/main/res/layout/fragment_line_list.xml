@@ -1,28 +1,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ismin.android.BookListFragment"
+    tools:context=".LineListFragment"
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/f_book_list_search"
-        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:id="@+id/f_line_list_search"
+        style="@android:style/Widget.Material.EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/recherche"
-        android:inputType="textPersonName"
-        android:textSize="18sp"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColorLink="#FF5722"
+        android:textSize="18sp" />
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/f_book_list_rcv_books"
+        android:id="@+id/f_line_list_rcv_lines"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:itemCount="10"
         android:scrollbars="vertical"
-        tools:listitem="@layout/row_book" />
-
+        tools:listitem="@layout/row_line" />
 </LinearLayout>

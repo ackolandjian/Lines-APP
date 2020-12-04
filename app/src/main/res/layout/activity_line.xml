@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200sp"
                 android:clickable="true"
-                android:contentDescription="img_mobilite_idf"
+                android:contentDescription="@string/img_mobilite_idf"
                 android:fitsSystemWindows="true"
                 android:focusable="true"
                 android:scaleType="centerCrop"
@@ -63,7 +63,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="casual"
                 android:text="@string/name_line"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/a_img_mobilite" />
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:fontFamily="casual"
-                android:text="Status of the line"
+                android:text="@string/status_of_the_line"
                 app:layout_constraintStart_toStartOf="@+id/a_line_img_infos"
                 app:layout_constraintTop_toBottomOf="@+id/a_line_img_infos" />
 
@@ -132,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="casual"
-                android:text="Transport mode"
+                android:text="@string/transport_mode"
                 app:layout_constraintStart_toStartOf="@+id/txtvStatusOfTheLine"
                 app:layout_constraintTop_toBottomOf="@+id/txtvStatusOfTheLine" />
 
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="casual"
-                android:text="Operator"
+                android:text="@string/operator"
                 app:layout_constraintStart_toStartOf="@+id/txtvTransportMode"
                 app:layout_constraintTop_toBottomOf="@+id/txtvTransportMode" />
 
@@ -152,7 +152,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="casual"
-                android:text="Network"
+                android:text="@string/network"
                 app:layout_constraintStart_toStartOf="@+id/txtvOperator"
                 app:layout_constraintTop_toBottomOf="@+id/txtvOperator" />
 
@@ -162,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="casual"
-                android:text="Accessibility of the line"
+                android:text="@string/accessibility_of_the_line"
                 app:layout_constraintStart_toStartOf="@+id/txtvNetwork"
                 app:layout_constraintTop_toBottomOf="@+id/txtvNetwork" />
 
@@ -171,8 +171,8 @@
                 android:layout_width="307dp"
                 android:layout_height="33dp"
                 android:fontFamily="casual"
-                android:text="Information"
-                android:textSize="25dp"
+                android:text="@string/information"
+                android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="@+id/a_line_img_infos"
                 app:layout_constraintStart_toEndOf="@+id/a_line_img_infos"
                 app:layout_constraintTop_toTopOf="@+id/a_line_img_infos" />

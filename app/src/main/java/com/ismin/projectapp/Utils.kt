@@ -1,4 +1,4 @@
-package com.ismin.android
+package com.ismin.projectapp
 
 import android.graphics.Outline
 import android.os.Build
@@ -29,22 +29,4 @@ class CallBackKt<T> : Callback<T> {
         onResponse?.invoke(response)
     }
 
-}
-
-fun curveImageViewCorner(image: ImageView, curveRadius: Float) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-        image.outlineProvider = object : ViewOutlineProvider() {
-            @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-            override fun getOutline(view: View?, outline: Outline?) {
-                outline?.setRoundRect(
-                        0,
-                        0,
-                        (view!!.width + curveRadius).toInt(),
-                        view.height,
-                        curveRadius
-                )
-            }
-        }
-        image.clipToOutline = true
-    }
 }

@@ -1,4 +1,4 @@
-package com.ismin.android
+package com.ismin.projectapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,20 +7,18 @@ import android.view.MenuItem
 import android.widget.TextView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-
 class LineActivity : AppCompatActivity() {
     private lateinit var floatingButton: FloatingActionButton
-    private lateinit var lineMainActivity: Book
+    private lateinit var lineMainActivity: Line
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        lineMainActivity = intent.getSerializableExtra("line_info") as Book
+        lineMainActivity = intent.getSerializableExtra("line_info") as Line
 
         setContentView(R.layout.activity_line)
-        //floatingButton = findViewById(R.id.a_line_floating_button)
 
         val status: TextView = findViewById(R.id.a_line_txv_status)
         status.text = lineMainActivity.status

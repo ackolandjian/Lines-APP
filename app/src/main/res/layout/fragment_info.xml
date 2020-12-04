@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/f_info_layout">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/f_info_layout">
 
     <LinearLayout
-        android:id="@+id/a_info_linear_layout_title_bar"
+        android:id="@+id/a_info_linear_layout_name_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
@@ -18,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:text="@string/prom" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -66,7 +65,7 @@
                     android:text="@string/app_name_info"
                     android:textAlignment="center"
                     android:textColor="@color/colorBlack"
-                    android:textSize="26sp"
+                    android:textSize="22sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -128,7 +127,7 @@
                     android:layout_marginRight="10dp"
                     android:text="@string/author"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -159,7 +158,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_baseline_person_24" />
+                        app:srcCompat="@drawable/ic_baseline_person_24"/>
 
                     <TextView
                         android:id="@+id/a_info_text_view_author1_name"
@@ -168,9 +167,9 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
-                        android:text="@string/author_chevalier"
+                        android:text="@string/author_ack"
                         android:textColor="@color/colorWhite"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/a_info_image_view_author1"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -197,13 +196,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/linkedin_chevalier"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="12sp"
                             android:layout_marginStart="10dp"
                             android:layout_marginLeft="10dp"
                             android:autoLink="web"
-                            android:textColorLink="@color/colorWhite"/>
+                            android:clickable="true"
+                            android:text="@string/linkedin_ack"
+                            android:textColor="@color/colorWhite"
+                            android:textColorLink="@color/colorWhite"
+                            android:textSize="12sp"
+                            android:focusable="true" />
 
                     </LinearLayout>
 
@@ -221,19 +222,22 @@
                             android:layout_width="13dp"
                             android:layout_height="13dp"
                             android:layout_gravity="center"
-                            app:srcCompat="@drawable/ic_baseline_link_24" />
+                            app:srcCompat="@drawable/ic_baseline_link_24"/>
 
                         <TextView
+                            android:id="@+id/hyperlink_git_anna"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="10dp"
                             android:layout_marginLeft="10dp"
-                            android:text="@string/github_chevalier"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="12sp"
                             android:autoLink="web"
-                            android:textColorLink="@color/colorWhite"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="@string/github_ack"
+                            android:textColor="@color/colorWhite"
+                            android:textColorLink="@color/colorWhite"
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -262,7 +266,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_baseline_person_24" />
+                        app:srcCompat="@drawable/ic_baseline_person_24"/>
 
                     <TextView
                         android:id="@+id/a_info_text_view_author2_name"
@@ -271,7 +275,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
-                        android:text="@string/author_ladriere"
+                        android:text="@string/author_cp"
                         android:textColor="@color/colorWhite"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -283,8 +287,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:orientation="horizontal"
                         app:layout_constraintStart_toEndOf="@+id/a_info_image_view_author2"
                         app:layout_constraintTop_toBottomOf="@+id/a_info_text_view_author2_name">
@@ -296,16 +301,17 @@
                             app:srcCompat="@drawable/ic_baseline_link_24" />
 
                         <TextView
+                            android:id="@+id/hyperlink_linkedin_clarisse"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/linkedin_ladriere"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="12sp"
-                            android:autoLink="web"
                             android:layout_marginStart="10dp"
                             android:layout_marginLeft="10dp"
-                            android:textColorLink="@color/colorWhite"/>
+                            android:autoLink="web"
+                            android:text="@string/linkedin_cp"
+                            android:textColor="@color/colorWhite"
+                            android:textColorLink="@color/colorWhite"
+                            android:textSize="12sp" />
 
                     </LinearLayout>
 
@@ -326,16 +332,19 @@
                             app:srcCompat="@drawable/ic_baseline_link_24" />
 
                         <TextView
+                            android:id="@+id/hyperlink_git_clarisse"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="10dp"
                             android:layout_marginLeft="10dp"
-                            android:text="@string/github_ladriere"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="12sp"
                             android:autoLink="web"
-                            android:textColorLink="@color/colorWhite"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="@string/github_cp"
+                            android:textColor="@color/colorWhite"
+                            android:textColorLink="@color/colorWhite"
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -365,7 +374,7 @@
                     android:layout_marginRight="10dp"
                     android:text="@string/instructions"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -413,7 +422,7 @@
                     android:layout_marginRight="10dp"
                     android:text="@string/project_purpose"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -461,7 +470,7 @@
                     android:layout_marginRight="10dp"
                     android:text="@string/requirements"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -509,7 +518,7 @@
                     android:layout_marginRight="10dp"
                     android:text="@string/libraries"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -554,9 +563,9 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:text="@string/licence"
+                    android:text="@string/license"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -571,7 +580,7 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/licence_content"
+                    android:text="@string/license_content"
                     android:textColor="@color/colorBlack"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
