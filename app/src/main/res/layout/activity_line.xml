@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LineActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="-173dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/a_img_mobilite"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:clickable="true"
+                android:contentDescription="img_mobilite_idf"
+                android:fitsSystemWindows="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ile_de_france_mobilites_partage" />
+
+            <TextView
+                android:id="@+id/a_line_txv_shortname_groupoflines"
+                android:layout_width="294dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="casual"
+                android:text="@string/shortname_group"
+                android:textColorLink="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toEndOf="@+id/a_line_txv_name_line"
+                app:layout_constraintTop_toBottomOf="@id/a_img_mobilite" />
+
+            <ImageView
+                android:id="@+id/a_line_img_infos"
+                android:layout_width="56dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="32dp"
+                android:contentDescription="TODO"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/a_line_txv_shortname_groupoflines"
+                app:srcCompat="@drawable/ic_baseline_info_24" />
+
+            <TextView
+                android:id="@+id/a_line_txv_name_line"
+                android:layout_width="83dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="casual"
+                android:text="@string/name_line"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/a_img_mobilite" />
+
+            <TextView
+                android:id="@+id/a_line_txv_status"
+                android:layout_width="120dp"
+                android:layout_height="21dp"
+                android:layout_marginEnd="82dp"
+                android:fontFamily="casual"
+                android:text="@string/status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtvStatusOfTheLine" />
+
+            <TextView
+                android:id="@+id/a_line_txv_transportmode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="casual"
+                android:text="@string/transportmode"
+                app:layout_constraintStart_toStartOf="@+id/a_line_txv_status"
+                app:layout_constraintTop_toTopOf="@+id/txtvTransportMode" />
+
+            <TextView
+                android:id="@+id/a_line_txv_operator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="casual"
+                android:text="@string/operator"
+                app:layout_constraintStart_toStartOf="@+id/a_line_txv_transportmode"
+                app:layout_constraintTop_toTopOf="@+id/txtvOperator" />
+
+            <TextView
+                android:id="@+id/a_line_txv_network"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/network"
+                app:layout_constraintStart_toStartOf="@+id/a_line_txv_operator"
+                app:layout_constraintTop_toTopOf="@+id/txtvNetwork" />
+
+            <TextView
+                android:id="@+id/a_line_txv_accessibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/accessibility"
+                app:layout_constraintStart_toStartOf="@+id/a_line_txv_network"
+                app:layout_constraintTop_toTopOf="@+id/txtvAccessibilityOfTheLine" />
+
+            <TextView
+                android:id="@+id/txtvStatusOfTheLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="casual"
+                android:text="Status of the line"
+                app:layout_constraintStart_toStartOf="@+id/a_line_img_infos"
+                app:layout_constraintTop_toBottomOf="@+id/a_line_img_infos" />
+
+            <TextView
+                android:id="@+id/txtvTransportMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:text="Transport mode"
+                app:layout_constraintStart_toStartOf="@+id/txtvStatusOfTheLine"
+                app:layout_constraintTop_toBottomOf="@+id/txtvStatusOfTheLine" />
+
+            <TextView
+                android:id="@+id/txtvOperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:text="Operator"
+                app:layout_constraintStart_toStartOf="@+id/txtvTransportMode"
+                app:layout_constraintTop_toBottomOf="@+id/txtvTransportMode" />
+
+            <TextView
+                android:id="@+id/txtvNetwork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:text="Network"
+                app:layout_constraintStart_toStartOf="@+id/txtvOperator"
+                app:layout_constraintTop_toBottomOf="@+id/txtvOperator" />
+
+            <TextView
+                android:id="@+id/txtvAccessibilityOfTheLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:text="Accessibility of the line"
+                app:layout_constraintStart_toStartOf="@+id/txtvNetwork"
+                app:layout_constraintTop_toBottomOf="@+id/txtvNetwork" />
+
+            <TextView
+                android:id="@+id/txtvInformation"
+                android:layout_width="307dp"
+                android:layout_height="33dp"
+                android:fontFamily="casual"
+                android:text="Information"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/a_line_img_infos"
+                app:layout_constraintStart_toEndOf="@+id/a_line_img_infos"
+                app:layout_constraintTop_toTopOf="@+id/a_line_img_infos" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
